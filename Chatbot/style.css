@@ -1,0 +1,128 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#send-icon {
+    transform: rotate(45deg);
+}
+
+body {
+    background-color: #98A6D4;
+}
+
+ul {
+    list-style: none;
+}
+
+.chatbot {
+    width: 850px;
+    position: fixed;
+    left: 300px;
+    right: 300px;
+    bottom: 100px;
+    overflow: hidden;
+    align-items: center;
+    border-radius: 15px;
+    box-shadow: 0 0 128px 0 rgba(0, 0, 0, 0.1),
+    32px 64px -48px rgba(0,0,0,0.5);
+    background-color: #fff;
+}
+
+.chatbot header {
+    background-color: #724ae8;
+    padding: 16px 0px;
+    text-align: center;
+}
+
+.chatbot header h1 {
+    color: white;
+    font-size: 1.4rem;
+}
+
+.chatbot .chatbox {
+    height: 420px;
+    overflow-y: auto;
+    padding: 30px 20px 100px;
+}
+
+.chatbox .chat {
+    display: flex;
+}
+
+.chatbox #robot {
+    height: 35px;
+    width: 35px;
+    align-self: flex-end;
+    color: #fff;
+    background-color: #724ae8;
+    text-align: center;
+    line-height: 35px;
+    border-radius: 5px;
+    margin: 0px 10px 7px 0px;
+}
+
+.chatbox .outgoing {
+    margin: 20px 0px;
+    justify-content: flex-end;
+}
+
+.chatbox .chat p {
+    padding: 12px 16px;
+    max-width: 75%;
+    white-space: pre-wrap;
+    gap: 5px;
+    background-color: #724ae8;
+    border-radius: 10px 10px 0px 10px;
+    color: white;
+    font-size: 0.95rem;
+}
+
+.chatbox .incoming p {
+    color: black;
+    background-color: #f2f2f2;
+    border-radius: 10px 10px 10px 0px;
+}
+
+#hand-icon {
+    color: orange;
+}
+
+.chat-input {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    gap: 5px;
+    background-color: #fff;
+    border-top: 1px solid #ccc;
+    padding: 5px 20px;
+}
+
+.chat-input textarea {
+    height: 25px;
+    /* max-height: 180px; */
+    width: 85%;
+    border: none;
+    outline: none;
+    font-size: 0.95rem;
+    resize: none;
+    padding: 16px 15px 16px 0px;
+    /* border: 2px solid red; */
+}
+
+#send-icon {
+    align-self: flex-start;
+    height: 25px;
+    line-height: 50px;
+    color: #724ae8;
+    font-size: 1.35rem;
+    cursor: pointer;
+    visibility: hidden;
+    /* border: 2px solid green; */
+}
+
+.chat-input textarea:valid ~ #send-icon {
+    visibility: visible;
+}
